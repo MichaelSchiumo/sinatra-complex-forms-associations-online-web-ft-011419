@@ -12,13 +12,13 @@
 
   <label>Choose an existing owner:</label>
 
-  <br>
+  <br></br>
 
-  <%Owner.each do |owner|%>
+  <%Owner.all.each do |owner|%>
     <input type="checkbox" name="pet[owner_ids][]" id="<%= owner.id%>" value="<%=owner.id%>" <%='checked' if @pets.owners.include?(pet) %>><%=owner.name%></input>
   <%end%>
 
-  <br>
+  <br></br>
 
   <label>and/or, create a new owner:</label>
   <br>
